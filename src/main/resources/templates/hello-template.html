@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello-MVC</title>
+</head>
+<body>
+
+    <!-- p 태그 안에 hello! empty를 남겨두는 이유는
+    이 파일 위에 커서를 올리고 오른쪽 마우스를 한 후
+    [Copy Path/Reference...] - [Absolute Path]를 통해
+    서버 없이도 View 파일을 구동해볼 수 있다. -->
+    <!-- 그 때 잘 구동되는지 확인하기 위한 더미 메시지이다. -->
+    <p th:text="'hello ' + ${name}">hello! empty</p>
+
+</body>
+</html>
