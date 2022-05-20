@@ -3,10 +3,14 @@ package hello.hellospring.service;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+
+// @Service // 스프링 컨테이너에 MemberService를 등록 / Service 안에 Component Annotation이 등록되어 있음 (Component Scan)
 public class MemberService {
 
     // private final MemberRepository memberRepository = new MemoryMemberRepository();
@@ -15,6 +19,7 @@ public class MemberService {
     // 객체 생성을 2번하는 것을 방지하기 위해 DI를 사용한다.
     private final MemberRepository memberRepository;
 
+    // @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
