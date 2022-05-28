@@ -19,6 +19,7 @@ public class MemberController {
     @Autowired // Spring 컨테이너에 있는 memberService를 자동(Auto) 주입시켜 줌.
     public MemberController(MemberService memberService) {
         this.memberservice = memberService;
+        System.out.println("memberService = " + memberService.getClass());
     }
 
     @GetMapping("/members/new")
